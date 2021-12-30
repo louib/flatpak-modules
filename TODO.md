@@ -1,3 +1,10 @@
+https://github.com/raspberrypi.git
+<!-- Branch for pinephone is pine64-kernel-ubports -->
+https://gitlab.com/pine64-org/linux.git
+<!-- TODO add the version of the kernel for Librem5? -->
+
+sudo apt install build-essential flex bison gcc-aarch64-linux-gnu libssl-dev
+
 https://sourceware.org/git/glibc.git
 https://github.com/git/git
 
