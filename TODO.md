@@ -1,10 +1,18 @@
-https://github.com/raspberrypi.git
+libssl-dev
+
+https://github.com/torvalds/linux.git
+
+https://github.com/raspberrypi/linux.git
 <!-- Branch for pinephone is pine64-kernel-ubports -->
 https://gitlab.com/pine64-org/linux.git
 <!-- TODO add the version of the kernel for Librem5? -->
 
-sudo apt install build-essential flex bison gcc-aarch64-linux-gnu libssl-dev
+https://github.com/openssl/openssl.git
 
+
+<!-- TODO M4 -->
+<!-- TODO gettext -->
+<!-- TODO help2man -->
 https://sourceware.org/git/glibc.git
 https://github.com/git/git
 
@@ -13,6 +21,8 @@ https://sourceware.org/git/binutils-gdb.git
 https://git.savannah.gnu.org/git/coreutils.git
 https://gcc.gnu.org/git/gcc.git
 https://gitlab.freedesktop.org/pkg-config/pkg-config.git
+
+https://github.com/westes/flex.git
 
 # The compilers.
 https://github.com/rust-lang/rust.git
