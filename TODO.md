@@ -8,6 +8,8 @@ https://gitlab.com/pine64-org/linux.git
 ## libssl-dev
 https://github.com/openssl/openssl.git
 
+https://git.savannah.gnu.org/git/automake.git
+https://git.savannah.gnu.org/git/autoconf.git
 
 <!-- TODO M4 -->
 <!-- TODO gettext -->
@@ -31,8 +33,6 @@ https://github.com/flatpak/flatpak.git
 
 https://git.savannah.gnu.org/git/gnulib.git
 https://git.savannah.gnu.org/git/libtool.git
-https://git.savannah.gnu.org/git/automake.git
-https://git.savannah.gnu.org/git/autoconf.git
 
 https://git.savannah.gnu.org/git/bash.git
 https://git.savannah.gnu.org/git/grep.git
