@@ -1,5 +1,3 @@
-libssl-dev
-
 https://github.com/torvalds/linux.git
 
 https://github.com/raspberrypi/linux.git
@@ -7,6 +5,7 @@ https://github.com/raspberrypi/linux.git
 https://gitlab.com/pine64-org/linux.git
 <!-- TODO add the version of the kernel for Librem5? -->
 
+## libssl-dev
 https://github.com/openssl/openssl.git
 
 
@@ -14,7 +13,7 @@ https://github.com/openssl/openssl.git
 <!-- TODO gettext -->
 <!-- TODO help2man -->
 https://sourceware.org/git/glibc.git
-https://github.com/git/git
+https://github.com/git/git.git
 
 # The basic stuff
 https://sourceware.org/git/binutils-gdb.git
