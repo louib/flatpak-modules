@@ -59,6 +59,8 @@ https://dev.gnupg.org/source/gnupg.git
 https://github.com/neovim/neovim.git
 <!-- TODO add the nvim plugins I use -->
 
+<!-- TODO the yubikey cli and gui apps -->
+
 <!-- TODO the `top` software -->
 
 <!-- gbus is in glib -->
