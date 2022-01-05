@@ -1,0 +1,5 @@
+---
+name: org.gnome.gitlab.GNOME.gnome-keyring
+sources:
+  - url: "https://gitlab.gnome.org/GNOME/gnome-keyring.git"
+buildsystem: autotools
