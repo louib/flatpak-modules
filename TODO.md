@@ -73,3 +73,8 @@ https://gitlab.gnome.org/World/Shortwave.git
 https://gitlab.gnome.org/GNOME/gnome-disk-utility.git
 https://gitlab.gnome.org/GNOME/nautilus.git
 https://github.com/keepassxreboot/keepassxc.git
+TODO monero
+TODO electrum
+TODO Firefox
+TODO Thunderbird
+TODO Zotero
