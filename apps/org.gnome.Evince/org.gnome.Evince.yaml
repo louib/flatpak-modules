@@ -1,0 +1,129 @@
+---
+app-id: org.gnome.Evince
+default-branch: stable
+runtime: org.gnome.Platform
+runtime-version: "41"
+sdk: org.gnome.Sdk
+build-options:
+  arch: {}
+command: evince
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/aclocal
+  - /man
+  - /share/man
+  - /share/gtk-doc
+  - /share/vala
+  - "*.la"
+  - "*.a"
+finish-args:
+  - "--share=ipc"
+  - "--socket=x11"
+  - "--socket=wayland"
+  - "--socket=pulseaudio"
+  - "--filesystem=host"
+  - "--talk-name=org.gnome.SettingsDaemon.MediaKeys"
+  - "--metadata=X-DConf=migrate-path=/org/gnome/evince/"
+  - "--env=GDK_PIXBUF_MODULE_FILE=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+  - "--talk-name=org.gtk.vfs"
+  - "--talk-name=org.gtk.vfs.*"
+  - "--talk-name=org.gnome.SessionManager"
+  - "--talk-name=org.freedesktop.FileManager1"
+  - "--own-name=org.gnome.evince"
+  - "--own-name=org.gnome.evince.Daemon"
+  - "--require-version=0.11.6"
+modules:
+  - name: webp-pixbuf-loader
+    sources:
+      - type: git
+        url: "https://github.com/aruiz/webp-pixbuf-loader.git"
+        commit: ddbcacf37d98aeca24429ee2cd975fb804d1f265
+    buildsystem: autotools
+    post-install:
+      - GDK_PIXBUF_MODULEDIR=/app/lib/gdk-pixbuf-2.0/2.10.0/loaders/ gdk-pixbuf-query-loaders > loaders.cache
+      - cat /usr/lib/*/gdk-pixbuf-2.0/2.10.0/loaders.cache loaders.cache > /app/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache
+  - name: popplerdata
+    sources:
+      - type: archive
+        url: "https://poppler.freedesktop.org/poppler-data-0.4.11.tar.gz"
+        sha256: 2cec05cd1bb03af98a8b06a1e22f6e6e1a65b1e2f3816cb3069bb0874825f08c
+        x-checker-data:
+          type: anitya
+    make-install-args:
+      - prefix=/app
+    no-autogen: true
+    buildsystem: autotools
+  - name: poppler
+    sources:
+      - type: archive
+        url: "https://poppler.freedesktop.org/poppler-22.01.0.tar.xz"
+        sha256: 7d3493056b5b86413e5c693c2cae02c5c06cd8e618d14c2c31e2c84b67b2313e
+        x-checker-data:
+          type: anitya
+    config-opts:
+      - "-DCMAKE_INSTALL_LIBDIR=/app/lib"
+      - "-DCMAKE_INSTALL_INCLUDEDIR=/app/include"
+      - "-DBUILD_GTK_TESTS=OFF"
+      - "-DBUILD_CPP_TESTS=OFF"
+      - "-DENABLE_BOOST=OFF"
+      - "-DENABLE_CPP=OFF"
+      - "-DENABLE_GOBJECT_INTROSPECTION=OFF"
+      - "-DENABLE_LIBOPENJPEG=openjpeg2"
+    buildsystem: autotools
+    cleanup:
+      - /bin
+  - name: djvulibre
+    sources:
+      - type: archive
+        url: "https://downloads.sourceforge.net/project/djvu/DjVuLibre/3.5.28/djvulibre-3.5.28.tar.gz"
+        sha256: fcd009ea7654fde5a83600eb80757bd3a76998e47d13c66b54c8db849f8f2edc
+        x-checker-data:
+          type: anitya
+    config-opts:
+      - "--disable-desktopfiles"
+    buildsystem: autotools
+    cleanup:
+      - /bin
+  - name: libgxps
+    sources:
+      - type: archive
+        url: "https://download.gnome.org/sources/libgxps/0.3/libgxps-0.3.2.tar.xz"
+        sha256: 6d27867256a35ccf9b69253eb2a88a32baca3b97d5f4ef7f82e3667fa435251c
+    config-opts:
+      - "-Denable-test=false"
+      - "-Ddisable-introspection=true"
+    buildsystem: autotools
+    cleanup:
+      - /bin
+  - name: gspell
+    sources:
+      - type: archive
+        url: "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz"
+        sha256: dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd
+    buildsystem: autotools
+    cleanup:
+      - /bin
+  - name: gnome-desktop
+    sources:
+      - type: archive
+        url: "https://download.gnome.org/sources/gnome-desktop/41/gnome-desktop-41.1.tar.xz"
+        sha256: be8aafa64d7ba2fd31079eed639d39fda1ea77ef77d35a678f019c4d91d473c2
+    config-opts:
+      - "-Ddesktop_docs=false"
+      - "-Ddebug_tools=false"
+    buildsystem: autotools
+    cleanup:
+      - /lib/girepository-1.0
+      - /share/gir-1.0
+  - name: evince
+    sources:
+      - type: archive
+        url: "https://download.gnome.org/sources/evince/41/evince-41.3.tar.xz"
+        sha256: 3346b01f9bdc8f2d5ffea92f110a090c64a3624942b5b543aad4592a9de33bb0
+        git-init: true
+    config-opts:
+      - "-Dnautilus=false"
+      - "-Dthumbnailer=false"
+    buildsystem: autotools
