@@ -28,3 +28,15 @@ get_flathub_app() {
 }
 
 get_flathub_app "org.mozilla.firefox.BaseApp"
+# I'm not sure what's up with the Thunderbird repo but there's a lot of
+# files in there. Will investigate at some point.
+# get_flathub_app "org.mozilla.Thunderbird"
+
+get_flathub_app "org.keepassxc.KeePassXC"
+get_flathub_app "org.zotero.Zotero"
+get_flathub_app "org.gnome.Evince"
+# get_flathub_app "org.gnome.Calls"
+# get_flathub_app "org.gnome.gedit"
+# get_flathub_app "org.gnome.Documents"
+# get_flathub_app "org.gnome.clocks"
+# get_flathub_app "org.gnome.Builder"
