@@ -28,7 +28,7 @@ get_flathub_app() {
     fi
 }
 
-get_flathub_app "org.mozilla.firefox.BaseApp"
+# get_flathub_app "org.mozilla.firefox.BaseApp"
 # I'm not sure what's up with the Thunderbird repo but there's a lot of
 # files in there. Will investigate at some point.
 # get_flathub_app "org.mozilla.Thunderbird"
@@ -38,8 +38,11 @@ get_flathub_app "org.zotero.Zotero"
 get_flathub_app "org.gnome.Evince"
 get_flathub_app "de.haeckerfelix.Shortwave"
 get_flathub_app "org.gnome.Documents"
+# get_flathub_app " org.gnome.Lollypop"
 # get_flathub_app "org.gnome.Calls"
+# Not sure about gedit, I feel like I could do without it.
 # get_flathub_app "org.gnome.gedit"
+# get_flathub_app "org.gnome.eog"
 # get_flathub_app "org.gnome.Documents"
 # get_flathub_app "org.gnome.clocks"
 # get_flathub_app "org.gnome.Builder"
