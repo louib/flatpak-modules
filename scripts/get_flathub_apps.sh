@@ -15,7 +15,7 @@ get_flathub_app() {
         echo "Would remove $destination_path"
     else
         echo "Will create $destination_path"
-         git clone --depth 1 "https://github.com/flathub/$flathub_app_id.git" "$destination_path"
+         git clone --recursive "https://github.com/flathub/$flathub_app_id.git" "$destination_path"
          rm -rf "$destination_path/.git"
          rm -rf "$destination_path/shared-modules"
          rm -f "$destination_path/flathub.json"
@@ -24,6 +24,11 @@ get_flathub_app() {
              echo "We need to convert the app manifest to YAML!"
              fpcli to-yaml "$destination_path/$flathub_app_id.json"
              rm "$destination_path/$flathub_app_id.json"
+         fi
+         if [[ -f "$destination_path/$flathub_app_id.yaml" ]]; then
+             fpcli resolve "$destination_path/$flathub_app_id.yaml"
+         else
+             echo "Where is the manifest file for $flathub_app_id?"
          fi
     fi
 }
