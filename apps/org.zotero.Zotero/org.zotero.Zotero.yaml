@@ -1,0 +1,63 @@
+---
+id: org.zotero.Zotero
+runtime: org.freedesktop.Platform
+runtime-version: "20.08"
+sdk: org.freedesktop.Sdk
+command: zotero
+finish-args:
+  - "--socket=x11"
+  - "--share=ipc"
+  - "--share=network"
+  - "--filesystem=home"
+  - "--filesystem=xdg-desktop"
+  - "--filesystem=xdg-documents"
+  - "--filesystem=xdg-download"
+  - "--filesystem=xdg-music"
+  - "--filesystem=xdg-pictures"
+  - "--filesystem=xdg-public-share"
+  - "--filesystem=xdg-videos"
+rename-desktop-file: zotero.desktop
+rename-icon: zotero
+modules:
+  - name: dbus-glib
+    sources:
+      - type: archive
+        url: "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.110.tar.gz"
+        sha256: 7ce4760cf66c69148f6bd6c92feaabb8812dee30846b24cd0f7395c436d7e825
+    config-opts:
+      - "--disable-static"
+      - "--disable-gtk-doc"
+    cleanup:
+      - "*.la"
+      - /bin
+      - /etc
+      - /include
+      - /libexec
+      - /share/gtk-doc
+      - /share/man
+  - name: zotero
+    sources:
+      - type: archive
+        url: "https://download.zotero.org/client/release/5.0.96.3/Zotero-5.0.96.3_linux-x86_64.tar.bz2"
+        sha512: 0777ec41bc151b0bd30076f8a7f59e431c3435728b4d85298421ef11aea5b7c1e122d3bb7fcc5551bb8c4472922796d9508a56df7a0913515d8568fcf3ca6fee
+        only-arches:
+          - x86_64
+      - type: archive
+        url: "https://download.zotero.org/client/release/5.0.96.3/Zotero-5.0.96.3_linux-i686.tar.bz2"
+        sha512: cc5f8504a85290799ed6f7150773dc157073d52da1d3eaca692aaedf864dd80dedfaf4fc5f947d516a91c3ac1e11f0cd419d7d3c412b4e8f299c2ab141e1896d
+        only-arches:
+          - i386
+      - type: file
+        path: org.zotero.Zotero.appdata.xml
+    buildsystem: simple
+    build-commands:
+      - "mkdir -p /app/{bin,share}"
+      - cp -R . /app/share/zotero
+      - install -D chrome/icons/default/default16.png /app/share/icons/hicolor/16x16/apps/zotero.png
+      - install -D chrome/icons/default/default32.png /app/share/icons/hicolor/32x32/apps/zotero.png
+      - install -D chrome/icons/default/default48.png /app/share/icons/hicolor/48x48/apps/zotero.png
+      - install -D chrome/icons/default/default256.png /app/share/icons/hicolor/256x256/apps/zotero.png
+      - "desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value='zotero -url %U' --set-key=Icon --set-value=org.zotero.Zotero zotero.desktop --add-mime-type=x-scheme-handler/zotero"
+      - install -D org.zotero.Zotero.appdata.xml /app/share/appdata/org.zotero.Zotero.appdata.xml
+      - ln -s /app/share/zotero/zotero /app/bin/zotero
+      - "sed -i 's/pref(\"app.update.enabled\", true);/pref(\"app.update.enabled\", false);/' /app/share/zotero/defaults/preferences/prefs.js"
