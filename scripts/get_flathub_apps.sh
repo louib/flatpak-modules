@@ -17,7 +17,6 @@ get_flathub_app() {
         echo "Will create $destination_path"
          git clone --recursive "https://github.com/flathub/$flathub_app_id.git" "$destination_path"
          rm -rf "$destination_path/.git"
-         rm -rf "$destination_path/shared-modules"
          rm -f "$destination_path/flathub.json"
          rm -f "$destination_path/.gitmodules"
          if [[ -f "$destination_path/$flathub_app_id.json" ]]; then
