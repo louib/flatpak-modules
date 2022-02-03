@@ -19,6 +19,7 @@ get_flathub_app() {
          rm -rf "$destination_path/.git"
          rm -f "$destination_path/flathub.json"
          rm -f "$destination_path/.gitmodules"
+         rm -f "$destination_path/.gitignore"
          if [[ -f "$destination_path/$flathub_app_id.json" ]]; then
              echo "We need to convert the app manifest to YAML!"
              fpcli to-yaml "$destination_path/$flathub_app_id.json"
