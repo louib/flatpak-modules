@@ -1,0 +1,31 @@
+app-id: org.freedesktop.Sdk.Extension.typescript-node16
+branch: '21.08'
+runtime: org.freedesktop.Sdk
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+build-extension: true
+base-extensions:
+  - org.freedesktop.Sdk.Extension.node16
+separate-locales: false
+appstream-compose: false
+build-options:
+  prefix: /usr/lib/sdk/node16
+  prepend-path: /usr/lib/sdk/node16/bin:/usr/lib/sdk/typescript-node16/bin
+  prepend-ld-library-path: /usr/lib/sdk/node16/lib
+  strip: true
+cleanup:
+  - /lib/pkgconfig
+  - /share/doc
+  - /share/man
+  - /share/systemtap
+modules:
+  - name: typescript
+    buildsystem: simple
+    build-commands:
+      - npm install --prefix=/usr/lib/sdk/typescript-node16 -g --offline typescript-4.6.4.tgz
+      - ls -l /usr/lib/sdk/typescript-node16/bin
+    sources:
+      -
+        sha512: "f626bf8d61c811ba38f477e3acb19f29b652b96a3d8933305cef826b7a51b12a5bb0c6dceff214f0d29d09955144169f54f1a7a097852fbe9938003ce08f5f12"
+        type: "file"
+        url: "https://registry.npmjs.org/typescript/-/typescript-4.6.4.tgz"
