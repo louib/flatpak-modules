@@ -1,0 +1,7 @@
+name: bash.master
+buildsystem: autotools
+sources:
+  -
+    type: git
+    url: https://git.savannah.gnu.org/git/bash.git
+    branch: master

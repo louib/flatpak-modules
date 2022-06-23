@@ -31,8 +31,6 @@ IFS=$'\n'; for file in $files; do
     if [[ "$manifest_type" == "module" ]]; then
         MODULES="$MODULES\n$file"
     fi
-
-
 done
 unset IFS
 
