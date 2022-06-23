@@ -1,0 +1,7 @@
+name: pkg-config.master
+buildsystem: autotools
+sources:
+  -
+    type: git
+    url: https://gitlab.freedesktop.org/pkg-config/pkg-config.git
+    branch: master
