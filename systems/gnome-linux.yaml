@@ -1,0 +1,5 @@
+name: gnome-linux.master
+buildsystem: simple
+modules:
+  - "../modules/com.github.rust-lang.cargo.yaml"
+  - "../modules/com.github.rust-lang.rust.yaml"
