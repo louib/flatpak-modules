@@ -43,7 +43,7 @@ get_flathub_app "org.zotero.Zotero"
 get_flathub_app "org.gnome.Evince"
 get_flathub_app "de.haeckerfelix.Shortwave"
 get_flathub_app "org.gnome.Documents"
-# get_flathub_app "io.neovim.nvim"
+get_flathub_app "io.neovim.nvim"
 # get_flathub_app " org.gnome.Lollypop"
 # get_flathub_app "org.gnome.Calls"
 # Not sure about gedit, I feel like I could do without it.
