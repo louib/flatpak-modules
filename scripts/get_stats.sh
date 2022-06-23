@@ -16,8 +16,6 @@ IFS=$'\n'; for file in $files; do
     if [[ ! -f "$file" ]]; then
         continue
     fi
-    echo "$file"
-
 
     manifest_type=$(fpcli get-type "$file" 2> /dev/null)
     if [[ -z "$manifest_type" ]]; then
