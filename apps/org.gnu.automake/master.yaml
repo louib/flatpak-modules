@@ -1,0 +1,11 @@
+name: automake.master
+buildsystem: simple
+build_commands:
+  - "make install"
+sources:
+  -
+    type: git
+    url: http://git.sv.gnu.org/r/automake.git
+    mirror-urls:
+      - https://github.com/autotools-mirror/automake.git
+    branch: master

@@ -1,0 +1,7 @@
+name: ghc.master
+buildsystem: simple
+sources:
+  -
+    type: git
+    url: https://gitlab.haskell.org/ghc/ghc.git
+    branch: master

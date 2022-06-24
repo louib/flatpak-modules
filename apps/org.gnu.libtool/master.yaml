@@ -1,0 +1,11 @@
+name: libtool.master
+buildsystem: simple
+build_commands:
+  - "make install"
+sources:
+  -
+    type: git
+    url: http://git.sv.gnu.org/r/libtool.git
+    mirror-urls:
+      - https://github.com/autotools-mirror/libtool.git
+    branch: master
