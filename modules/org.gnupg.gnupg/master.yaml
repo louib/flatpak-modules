@@ -1,0 +1,5 @@
+---
+name: "gnupg.master"
+sources:
+  - type: git
+    url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2

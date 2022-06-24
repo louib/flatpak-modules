@@ -1,0 +1,9 @@
+---
+name: "binutils.master"
+sources:
+  - type: git
+    url: "git://sourceware.org/git/binutils-gdb.git"
+    mirror-urls:
+      - "https://github.com/bminor/binutils-gdb.git"
+    branch: master
+

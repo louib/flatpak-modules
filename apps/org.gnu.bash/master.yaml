@@ -4,4 +4,6 @@ sources:
   -
     type: git
     url: https://git.savannah.gnu.org/git/bash.git
+    mirror-urls:
+      - "https://github.com/bminor/bash.git"
     branch: master

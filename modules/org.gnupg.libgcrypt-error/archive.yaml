@@ -1,0 +1,5 @@
+---
+name: "libgcrypt-error.archive"
+sources:
+  - type: archive
+    url: https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.45.tar.bz2
