@@ -32,7 +32,7 @@ IFS=$'\n'; for file in $files; do
 done
 unset IFS
 
-echo -e "Found applictions: $APPS"
+echo -e "Found applications: $APPS"
 
 APP_COUNT=$(echo -e "$APPS" | wc -l)
 APP_COUNT=$(( APP_COUNT - 1 ))
