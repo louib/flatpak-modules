@@ -1,0 +1,6 @@
+---
+name: "sed.master"
+sources:
+  - type: git
+    branch: master
+    url: "https://git.savannah.gnu.org/git/sed.git"

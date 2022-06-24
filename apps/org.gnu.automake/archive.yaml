@@ -1,0 +1,10 @@
+name: automake.archive
+buildsystem: simple
+build_commands:
+  - "make install"
+sources:
+  -
+    type: archive
+    url: https://gnu.freemirror.org/gnu/automake/automake-1.16.tar.xz
+    mirror-urls:
+      - "https://gnu.freemirror.org/gnu/automake/automake-1.16.tar.gz"

@@ -1,0 +1,5 @@
+---
+name: "wget.archive"
+sources:
+  - type: archive
+    url: https://ftp.gnu.org/gnu/wget/wget-1.21.tar.gz
