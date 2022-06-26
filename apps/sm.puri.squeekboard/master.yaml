@@ -1,0 +1,7 @@
+---
+name: "squeekboard.master"
+sources:
+  - type: git
+    url: "https://gitlab.gnome.org/World/Phosh/squeekboard.git"
+    branch: master
+
