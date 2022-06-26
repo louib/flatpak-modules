@@ -1,0 +1,6 @@
+---
+name: phoc.master
+sources:
+  - type: git
+    url: "https://gitlab.gnome.org/World/Phosh/phoc.git"
+    branch: master

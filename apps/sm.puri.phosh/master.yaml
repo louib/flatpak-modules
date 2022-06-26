@@ -1,0 +1,7 @@
+---
+name: phosh.master
+sources:
+  - type: git
+    url: "https://gitlab.gnome.org/World/Phosh/phosh.git"
+    branch: master
+
