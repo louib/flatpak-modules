@@ -1,6 +1,6 @@
 name: neovim.master
 buildsystem: simple
-build_instructions:
+build-commands:
   - "make CMAKE_BUILD_TYPE=RelWithDebInfo"
   - "sudo make install"
 sources:
