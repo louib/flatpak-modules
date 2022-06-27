@@ -1,0 +1,6 @@
+---
+name: XELFViewer.master
+sources:
+  - type: git
+    url: "https://github.com/horsicq/XELFViewer.git"
+    branch: master

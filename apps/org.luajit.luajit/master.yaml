@@ -1,0 +1,6 @@
+---
+name: luajit.master
+sources:
+  - type: git
+    url: "https://luajit.org/git/luajit.git"
+    branch: master

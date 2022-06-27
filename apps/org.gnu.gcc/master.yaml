@@ -1,0 +1,8 @@
+---
+name: gcc.master
+buildsystem: autotools
+# --prefix=/opt/gccgo --enable-languages=c,c++,go --with-ld=/opt/gold/bin/ld
+sources:
+  - type: git
+    url: "https://gcc.gnu.org/git/gcc.git"
+    branch: master

@@ -1,0 +1,6 @@
+---
+name: cryptsetup.master
+sources:
+  - type: git
+    url: "https://gitlab.com/cryptsetup/cryptsetup.git"
+    branch: master

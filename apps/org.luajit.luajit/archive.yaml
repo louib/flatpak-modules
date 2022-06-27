@@ -1,0 +1,5 @@
+---
+name: LuaJIT.archive
+sources:
+  - type: archive
+    url: "https://luajit.org/download/LuaJIT-2.0.5.tar.gz"
