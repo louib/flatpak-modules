@@ -5,6 +5,13 @@ https://github.com/raspberrypi/linux.git
 https://gitlab.com/pine64-org/linux.git
 <!-- TODO add the version of the kernel for Librem5? -->
 
+## Kernel related stuff
+Maybe have another look at the repos located [here](https://git.kernel.org/)
+https://git.kernel.org/pub/scm/fs/fscrypt/fscrypt.git/
+https://git.kernel.org/pub/scm/fs/ext2/e2fsprogs.git/
+https://git.kernel.org/pub/scm/bluetooth/bluez.git/
+
+
 ## libssl-dev
 https://github.com/openssl/openssl.git
 
@@ -36,11 +43,10 @@ https://github.com/systemd/systemd.git
 
 https://git.savannah.gnu.org/git/grub.git
 
-# The UI stuff
-https://gitlab.freedesktop.org/wayland/wayland.git
-https://gitlab.gnome.org/World/Phosh/phoc.git
-https://gitlab.gnome.org/World/Phosh/phosh.git
+# Gnome related stuff
+https://gitlab.gnome.org/GNOME/dconf.git
 https://gitlab.gnome.org/GNOME/eog.git
+
 
 # The essential apps
 https://dev.gnupg.org/source/gnupg.git
