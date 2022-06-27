@@ -1,0 +1,7 @@
+---
+name: project-name.master
+sources:
+  - type: archive
+    url: "https://go.googlesource.com/go"
+    mirror-urls:
+      - "https://github.com/golang/go.git"
