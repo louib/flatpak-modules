@@ -4,4 +4,3 @@ sources:
   - type: git
     url: "https://gitlab.gnome.org/World/Phosh/libcall-ui.git"
     branch: master
-

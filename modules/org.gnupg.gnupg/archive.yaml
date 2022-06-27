@@ -1,5 +1,5 @@
 ---
-name: "gnupg.archive"
+name: gnupg.archive
 sources:
   - type: archive
-    url: https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2
+    url: "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.3.6.tar.bz2"

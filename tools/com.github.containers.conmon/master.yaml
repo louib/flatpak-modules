@@ -3,4 +3,3 @@ name: project-name.master
 sources:
   - type: archive
     url: "https://github.com/containers/conmon"
-

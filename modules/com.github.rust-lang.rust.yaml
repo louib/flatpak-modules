@@ -1,3 +1,4 @@
+---
 name: com.github.rust-lang.rust
 sources:
   - url: "https://github.com/rust-lang/rust.git"

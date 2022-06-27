@@ -1,7 +1,6 @@
 ---
-name: "macchanger.master"
+name: macchanger.master
 sources:
   - type: git
     url: "https://github.com/alobbs/macchanger.git"
     branch: master
-

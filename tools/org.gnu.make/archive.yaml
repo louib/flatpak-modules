@@ -1,9 +1,8 @@
+---
 name: make.archive
+sources:
+  - type: archive
+    url: "https://mirror.0xem.ma/gnu/make/make-3.81.tar.bz2"
 buildsystem: simple
 build-commands:
-  - "make install"
-sources:
-  -
-    type: archive
-    url: https://mirror.0xem.ma/gnu/make/make-3.81.tar.bz2
-    sha256sum: FFF54545454FFF
+  - make install

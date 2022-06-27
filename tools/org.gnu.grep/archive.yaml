@@ -1,5 +1,5 @@
 ---
-name: "grep.archive"
+name: grep.archive
 sources:
   - type: archive
-    url: https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz
+    url: "https://ftp.gnu.org/gnu/grep/grep-3.7.tar.xz"

@@ -1,9 +1,8 @@
 ---
-name: "glibc.master"
+name: glibc.master
 sources:
   - type: git
     url: "https://sourceware.org/git/glibc.git"
     mirror-urls:
       - "https://github.com/bminor/glibc.git"
     branch: master
-

@@ -1,5 +1,6 @@
+---
 name: screen.master
-buildsystem: autotools
 sources:
   - type: archive
-    url: https://git.savannah.gnu.org/git/screen.git
+    url: "https://git.savannah.gnu.org/git/screen.git"
+buildsystem: autotools

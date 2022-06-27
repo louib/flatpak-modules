@@ -1,9 +1,8 @@
+---
 name: git.archive
+sources:
+  - type: archive
+    url: "https://www.kernel.org/pub/software/scm/git/git-2.36.1.tar.gz"
 buildsystem: simple
 build-commands:
-  - "make install"
-sources:
-  -
-    type: archive
-    url: https://www.kernel.org/pub/software/scm/git/git-2.36.1.tar.gz
-    sha256sum: FFF54545454FFF
+  - make install

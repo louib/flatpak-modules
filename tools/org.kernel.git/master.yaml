@@ -6,4 +6,3 @@ sources:
     mirror-urls:
       - "https://github.com/git/git.git"
     branch: master
-

@@ -1,11 +1,11 @@
+---
 name: autoconf.master
+sources:
+  - type: git
+    url: "http://git.sv.gnu.org/r/autoconf.git"
+    mirror-urls:
+      - "https://github.com/autotools-mirror/autoconf.git"
+    branch: master
 buildsystem: simple
 build-commands:
-  - "make install"
-sources:
-  -
-    type: git
-    url: http://git.sv.gnu.org/r/autoconf.git
-    mirror-urls:
-      - https://github.com/autotools-mirror/autoconf.git
-    branch: master
+  - make install

@@ -3,4 +3,3 @@ name: project-name.master
 sources:
   - type: archive
     url: "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz"
-

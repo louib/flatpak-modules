@@ -1,5 +1,5 @@
 ---
-name: "musl.archive"
+name: musl.archive
 sources:
   - type: archive
-    url: https://git.etalabs.net/cgit/musl/snapshot/musl-1.2.3.tar.gz
+    url: "https://git.etalabs.net/cgit/musl/snapshot/musl-1.2.3.tar.gz"
