@@ -22,8 +22,8 @@ IFS=$'\n'; for file in $files; do
         continue;
     fi
 
-    # FIXME fpcli currently only supports linting the app manifests.
-    if [[ "$manifest_type" != "application" ]]; then
+    # FIXME fpcli does not support linting the source manifests.
+    if [[ "$manifest_type" == "source" ]]; then
         continue
     fi
 
