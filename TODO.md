@@ -27,11 +27,7 @@ https://github.com/westes/flex.git
 # The compilers.
 https://github.com/rust-lang/rust.git
 
-https://github.com/flatpak/flatpak-builder.git
-https://github.com/flatpak/flatpak.git
-
 https://git.savannah.gnu.org/git/gnulib.git
-https://git.savannah.gnu.org/git/grep.git
 https://git.savannah.gnu.org/git/gzip.git
 
 <!-- Is ssh-agent generated from that repo?? -->
@@ -70,3 +66,7 @@ TODO electrum
 TODO Firefox
 TODO Thunderbird
 TODO Zotero
+
+# Podman
+
+https://github.com/containers/image.git

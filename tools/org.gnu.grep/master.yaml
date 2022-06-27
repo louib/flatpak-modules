@@ -1,0 +1,7 @@
+---
+name: grep.master
+sources:
+  - type: git
+    url: "https://git.savannah.gnu.org/git/grep.git"
+    branch: master
+
