@@ -22,6 +22,11 @@ IFS=$'\n'; for file in $files; do
         continue;
     fi
 
+    # FIXME fpcli currently only supports linting the app manifests.
+    if [[ "$manifest_type" != "application" ]]; then
+        continue
+    fi
+
     echo "Linting Flatpak manifest at $file."
     fpcli lint "$file"
 done

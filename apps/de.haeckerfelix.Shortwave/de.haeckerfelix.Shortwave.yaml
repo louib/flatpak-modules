@@ -7,7 +7,6 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
-  arch: {}
 command: shortwave
 finish-args:
   - "--share=network"

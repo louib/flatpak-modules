@@ -4,8 +4,7 @@ default-branch: stable
 runtime: org.gnome.Platform
 runtime-version: "41"
 sdk: org.gnome.Sdk
-build-options:
-  arch: {}
+build-options: {}
 command: evince
 cleanup:
   - /include

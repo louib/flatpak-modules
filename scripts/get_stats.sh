@@ -7,32 +7,32 @@ die() { echo "$*" 1>&2 ; exit 1; }
 
 set -e
 
-APPS=""
-MODULES=""
-# TODO also count the sources?
-
-files=$(find "$SCRIPT_DIR/../")
-IFS=$'\n'; for file in $files; do
-    if [[ ! -f "$file" ]]; then
+file_paths=$(find "$SCRIPT_DIR/../")
+IFS=$'\n'; for file_path in $file_paths; do
+    if [[ ! -f "$file_path" ]]; then
         continue
     fi
 
-    manifest_type=$(fpcli get-type "$file" 2> /dev/null)
+    readarray -d "/" -t path_parts <<< "$file_path"
+
+    manifest_variant = "${path_parts[-1]}"
+    manifest_id = "${path_parts[-2]}"
+    manifest_category = "${path_parts[-3]}"
+
+    manifest_type=$(fpcli get-type "$file_path" 2> /dev/null)
     if [[ -z "$manifest_type" ]]; then
         continue;
     fi
 
     if [[ "$manifest_type" == "application" ]]; then
-        APPS="$APPS\n$file"
+        APPS="$APPS\n$file_path"
     fi
 
     if [[ "$manifest_type" == "module" ]]; then
-        MODULES="$MODULES\n$file"
+        MODULES="$MODULES\n$file_path"
     fi
 done
 unset IFS
-
-echo -e "Found applications: $APPS"
 
 APP_COUNT=$(echo -e "$APPS" | wc -l)
 APP_COUNT=$(( APP_COUNT - 1 ))
