@@ -12,7 +12,6 @@ https://git.savannah.gnu.org/git/automake.git
 https://git.savannah.gnu.org/git/autoconf.git
 
 <!-- TODO M4 -->
-<!-- TODO gettext -->
 <!-- TODO help2man -->
 https://sourceware.org/git/glibc.git
 https://github.com/git/git.git
@@ -32,9 +31,6 @@ https://github.com/flatpak/flatpak-builder.git
 https://github.com/flatpak/flatpak.git
 
 https://git.savannah.gnu.org/git/gnulib.git
-https://git.savannah.gnu.org/git/libtool.git
-
-https://git.savannah.gnu.org/git/bash.git
 https://git.savannah.gnu.org/git/grep.git
 https://git.savannah.gnu.org/git/gzip.git
 
@@ -43,10 +39,6 @@ https://github.com/openssh/openssh-portable.git
 https://github.com/systemd/systemd.git
 
 https://git.savannah.gnu.org/git/grub.git
-
-# This is LUKS
-https://gitlab.com/cryptsetup/cryptsetup.git
-
 
 # The UI stuff
 https://gitlab.freedesktop.org/wayland/wayland.git
