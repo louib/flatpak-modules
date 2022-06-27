@@ -1,0 +1,7 @@
+---
+name: wayland.master
+sources:
+  - type: git
+    url: "https://gitlab.freedesktop.org/wayland/wayland.git"
+    branch: master
+

@@ -1,0 +1,5 @@
+---
+name: findutils.archive
+sources:
+  - type: archive
+    url: "https://ftp.gnu.org/gnu/findutils/findutils-4.9.0.tar.xz"
