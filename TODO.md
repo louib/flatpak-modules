@@ -52,7 +52,7 @@ https://github.com/neovim/neovim.git
 
 <!-- TODO the yubikey cli and gui apps -->
 
-<!-- TODO the `top` software -->
+<!-- TODO the `top` software, where is it?? -->
 
 https://code.videolan.org/videolan/vlc.git
 https://gitlab.gnome.org/GNOME/gnome-shell.git
