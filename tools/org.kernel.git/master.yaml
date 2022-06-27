@@ -3,5 +3,7 @@ name: git.master
 sources:
   - type: git
     url: "https://git.kernel.org/pub/scm/git/git.git"
+    mirror-urls:
+      - "https://github.com/git/git.git"
     branch: master
 

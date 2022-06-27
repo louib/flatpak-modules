@@ -1,0 +1,7 @@
+---
+name: nmap.master
+sources:
+  - type: git
+    url: "https://github.com/nmap/nmap.git"
+    branch: master
+

@@ -1,0 +1,8 @@
+---
+name: fenv.master
+sources:
+  - type: git
+    url: "https://gitlab.gnome.org/ZanderBrown/fenv.git"
+    mirror-urls:
+      - "https://gitlab.gnome.org/louib/fenv.git"
+    branch: master
