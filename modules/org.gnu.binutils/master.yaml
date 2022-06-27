@@ -1,5 +1,7 @@
 ---
 name: "binutils.master"
+buildsystem: autotools
+# --enable-gold=default --prefix=/opt/gold
 sources:
   - type: git
     url: "git://sourceware.org/git/binutils-gdb.git"
