@@ -6,3 +6,4 @@ This repository is composed of Bash script that leverage the
 
 ## References
 * https://go.dev/doc/install/gccgo
+* https://podman.io/getting-started/installation

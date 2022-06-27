@@ -1,0 +1,8 @@
+---
+name: project-name.master
+# BUILDTAGS="selinux seccomp"
+# make install PREFIX=/usr
+sources:
+  - type: archive
+    url: "https://github.com/containers/podman/"
+

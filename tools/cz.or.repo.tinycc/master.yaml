@@ -1,0 +1,8 @@
+---
+name: tinycc.master
+sources:
+  - type: git
+    url: "https://repo.or.cz/tinycc.git"
+    mirror-urls:
+      - "https://github.com/TinyCC/tinycc.git"
+    branch: master

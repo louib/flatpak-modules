@@ -1,0 +1,7 @@
+---
+name: runc.master
+sources:
+  - type: git
+    url: "https://github.com/opencontainers/runc.git"
+    branch: master
+
