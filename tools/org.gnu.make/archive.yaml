@@ -1,6 +1,6 @@
 name: make.archive
 buildsystem: simple
-build_commands:
+build-commands:
   - "make install"
 sources:
   -
