@@ -22,7 +22,7 @@ get_flathub_app() {
          rm -f "$destination_path/.gitignore"
          if [[ -f "$destination_path/$flathub_app_id.json" ]]; then
              echo "We need to convert the app manifest to YAML!"
-             fpcli to-yaml "$destination_path/$flathub_app_id.json"
+             fpcli convert "$destination_path/$flathub_app_id.json" yaml > "$destination_path/$flathub_app_id.yaml"
              rm "$destination_path/$flathub_app_id.json"
          fi
          if [[ -f "$destination_path/$flathub_app_id.yaml" ]]; then
@@ -44,6 +44,7 @@ get_flathub_app "org.gnome.Evince"
 get_flathub_app "de.haeckerfelix.Shortwave"
 get_flathub_app "org.gnome.Documents"
 get_flathub_app "io.neovim.nvim"
+get_flathub_app "org.gnome.Builder"
 # get_flathub_app " org.gnome.Lollypop"
 # get_flathub_app "org.gnome.Calls"
 # Not sure about gedit, I feel like I could do without it.
@@ -51,4 +52,3 @@ get_flathub_app "io.neovim.nvim"
 # get_flathub_app "org.gnome.eog"
 # get_flathub_app "org.gnome.Documents"
 # get_flathub_app "org.gnome.clocks"
-# get_flathub_app "org.gnome.Builder"
