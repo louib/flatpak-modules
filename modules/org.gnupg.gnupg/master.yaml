@@ -3,4 +3,4 @@ name: gnupg.master
 sources:
   - type: git
     url: "https://dev.gnupg.org/source/gnupg.git"
-    branch: "master"
+    branch: master
