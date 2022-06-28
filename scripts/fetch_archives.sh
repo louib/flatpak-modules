@@ -13,8 +13,12 @@ IFS=$'\n'; for file_path in $file_paths; do
         continue
     fi
 
+    if [[ "$file_path" =~ \.git\/ || "$file_path" =~ \.github\/ ]]; then
+        continue
+    fi
+
     if [[ "$file_path" =~ .*yml$ || "$file_path" =~ .*yaml$ ]]; then
-        manifest_urls=$(fpcli get-urls --mirror-urls "$file_path" 2> /dev/null) 
+        manifest_urls=$(fpcli get-urls --mirror-urls "$file_path" archive)
 
         for url in $manifest_urls; do
             echo "Found manifest URL $url"
