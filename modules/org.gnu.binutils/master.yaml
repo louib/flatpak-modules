@@ -1,11 +1,12 @@
 ---
-name: "binutils.master"
-buildsystem: autotools
-# --enable-gold=default --prefix=/opt/gold
+name: binutils.master
 sources:
   - type: git
     url: "git://sourceware.org/git/binutils-gdb.git"
     mirror-urls:
       - "https://github.com/bminor/binutils-gdb.git"
     branch: master
-
+config-opts:
+  - "--enable-gold=default"
+  - "--prefix=/opt/gold"
+buildsystem: autotools

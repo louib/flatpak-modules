@@ -1,10 +1,10 @@
+---
 name: neovim.master
+sources:
+  - type: git
+    url: "https://github.com/neovim/neovim.git"
+    branch: master
 buildsystem: simple
 build-commands:
-  - "make CMAKE_BUILD_TYPE=RelWithDebInfo"
-  - "sudo make install"
-sources:
-  -
-    type: git
-    url: https://github.com/neovim/neovim.git
-    branch: master
+  - make CMAKE_BUILD_TYPE=RelWithDebInfo
+  - sudo make install

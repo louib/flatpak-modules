@@ -13,6 +13,7 @@ build-options:
   prefix: /usr/lib/sdk/node16
   prepend-path: "/usr/lib/sdk/node16/bin:/usr/lib/sdk/typescript-node16/bin"
   prepend-ld-library-path: /usr/lib/sdk/node16/lib
+  env: []
   strip: true
 cleanup:
   - /lib/pkgconfig
