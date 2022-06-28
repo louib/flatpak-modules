@@ -38,7 +38,6 @@ https://gitlab.gnome.org/GNOME/eog.git
 
 
 # The essential apps
-https://dev.gnupg.org/source/gnupg.git
 https://github.com/neovim/neovim.git
 <!-- TODO add the nvim plugins I use -->
 
@@ -61,6 +60,9 @@ TODO electrum
 TODO Firefox
 TODO Thunderbird
 TODO Zotero
+
+coreboot
+libreboot
 
 # Podman
 https://github.com/containers/image.git
