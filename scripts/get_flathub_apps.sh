@@ -45,6 +45,7 @@ get_flathub_app "de.haeckerfelix.Shortwave"
 get_flathub_app "org.gnome.Documents"
 get_flathub_app "io.neovim.nvim"
 get_flathub_app "org.gnome.Builder"
+get_flathub_app "com.belmoussaoui.Authenticator"
 # get_flathub_app " org.gnome.Lollypop"
 # get_flathub_app "org.gnome.Calls"
 # Not sure about gedit, I feel like I could do without it.
