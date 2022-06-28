@@ -1,0 +1,6 @@
+---
+name: grub.master
+sources:
+  - type: git
+    url: "https://git.savannah.gnu.org/git/grub.git"
+    branch: master

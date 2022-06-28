@@ -1,0 +1,6 @@
+---
+name: qemu.master
+sources:
+  - type: git
+    url: "https://gitlab.com/qemu-project/qemu.git"
+    branch: master

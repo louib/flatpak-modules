@@ -30,15 +30,11 @@ https://gitlab.freedesktop.org/pkg-config/pkg-config.git
 https://github.com/westes/flex.git
 
 # The compilers.
-https://github.com/rust-lang/rust.git
-
 https://git.savannah.gnu.org/git/gnulib.git
 https://git.savannah.gnu.org/git/gzip.git
 
 <!-- Is ssh-agent generated from that repo?? -->
 https://github.com/openssh/openssh-portable.git
-
-https://git.savannah.gnu.org/git/grub.git
 
 # Gnome related stuff
 https://gitlab.gnome.org/GNOME/dconf.git
@@ -49,6 +45,8 @@ https://gitlab.gnome.org/GNOME/eog.git
 https://dev.gnupg.org/source/gnupg.git
 https://github.com/neovim/neovim.git
 <!-- TODO add the nvim plugins I use -->
+
+<!-- TODO mfa-agent -->
 
 <!-- TODO the yubikey cli and gui apps -->
 
