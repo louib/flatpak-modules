@@ -1,5 +1,6 @@
 # Flatpak modules
 ![manifest formatting job status](https://github.com/louib/flatpak-modules/workflows/formatting/badge.svg)
+![shellcheck job status](https://github.com/louib/flatpak-modules/workflows/shellcheck/badge.svg)
 
 My collection of Flatpak modules for different OSes and devices.
 This repository is composed of Bash script that leverage the
