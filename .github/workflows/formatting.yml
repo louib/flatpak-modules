@@ -15,5 +15,9 @@ jobs:
       run: cargo --version
     - name: installing fpcli
       run: cargo install fpcli
+    - name: running ls
+      run: ls -l
+    - name: running pwd
+      run: pwd
     - name: checking for linting issues with the Flatpak manifests
       run: bash ../../scripts/lint.sh
