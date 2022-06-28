@@ -15,8 +15,11 @@ IFS=$'\n'; for file_path in $file_paths; do
 
     readarray -d "/" -t path_parts <<< "$file_path"
 
+    # shellcheck disable=SC2034
     manifest_variant="${path_parts[-1]}"
+    # shellcheck disable=SC2034
     manifest_id="${path_parts[-2]}"
+    # shellcheck disable=SC2034
     manifest_category="${path_parts[-3]}"
 
     manifest_type=$(fpcli get-type "$file_path" 2> /dev/null)

@@ -7,10 +7,6 @@ die() { echo "$*" 1>&2 ; exit 1; }
 
 set -e
 
-APPS=""
-MODULES=""
-# TODO also count the sources?
-
 files=$(find "$SCRIPT_DIR/../")
 IFS=$'\n'; for file in $files; do
     if [[ ! -f "$file" ]]; then
@@ -31,4 +27,3 @@ IFS=$'\n'; for file in $files; do
     fpcli lint "$file"
 done
 unset IFS
-

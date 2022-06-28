@@ -1,0 +1,23 @@
+name: shellcheck
+
+on: [push, pull_request]
+
+jobs:
+  formatting:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: updating available system dependencies
+      run: sudo apt-get update
+
+    - name: installing shellcheck
+      run: sudo apt-get install -y shellcheck
+
+    - name: printing shellcheck version
+      run: shellcheck --version
+
+    - name: Running shellcheck
+      run: shellcheck ./scripts/*.sh
