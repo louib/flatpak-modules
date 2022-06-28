@@ -1,0 +1,6 @@
+---
+name: coreutils.master
+sources:
+  - type: git
+    url: "https://git.savannah.gnu.org/git/coreutils.git"
+    branch: master

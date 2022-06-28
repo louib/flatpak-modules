@@ -23,10 +23,6 @@ https://git.savannah.gnu.org/git/autoconf.git
 <!-- TODO help2man -->
 
 # The basic stuff
-https://git.savannah.gnu.org/git/coreutils.git
-https://gcc.gnu.org/git/gcc.git
-https://gitlab.freedesktop.org/pkg-config/pkg-config.git
-
 https://github.com/westes/flex.git
 
 # The compilers.
