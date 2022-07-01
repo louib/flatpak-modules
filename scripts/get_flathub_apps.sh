@@ -7,10 +7,11 @@ set -e
 
 get_flathub_app() {
     flathub_app_id=$1
+    flathub_app_type=$2
     # TODO assert that the app_id is populated
     echo "Getting Flathub app $flathub_app_id"
 
-    destination_path="$SCRIPT_DIR/../apps/$flathub_app_id"
+    destination_path="$SCRIPT_DIR/../$flathub_app_type/$flathub_app_id"
     if [[ -d "$destination_path" ]]; then
         echo "Would remove $destination_path"
     else
@@ -33,23 +34,25 @@ get_flathub_app() {
     fi
 }
 
-# get_flathub_app "org.mozilla.firefox.BaseApp"
+# get_flathub_app "org.mozilla.firefox.BaseApp" apps
 # I'm not sure what's up with the Thunderbird repo but there's a lot of
 # files in there. Will investigate at some point.
-# get_flathub_app "org.mozilla.Thunderbird"
+# get_flathub_app "org.mozilla.Thunderbird" apps
+
+get_flathub_app "org.freedesktop.Sdk.Extension.haskell" extensions
 
 # get_flathub_app "org.keepassxc.KeePassXC"
-get_flathub_app "org.zotero.Zotero"
-get_flathub_app "org.gnome.Evince"
-get_flathub_app "de.haeckerfelix.Shortwave"
-get_flathub_app "org.gnome.Documents"
-get_flathub_app "io.neovim.nvim"
-get_flathub_app "org.gnome.Builder"
-get_flathub_app "com.belmoussaoui.Authenticator"
-# get_flathub_app " org.gnome.Lollypop"
-# get_flathub_app "org.gnome.Calls"
+get_flathub_app "org.zotero.Zotero" apps
+get_flathub_app "org.gnome.Evince" apps
+get_flathub_app "de.haeckerfelix.Shortwave" apps
+# get_flathub_app "org.gnome.Documents" apps
+get_flathub_app "io.neovim.nvim" apps
+# get_flathub_app "org.gnome.Builder" apps
+get_flathub_app "com.belmoussaoui.Authenticator" apps
+# get_flathub_app " org.gnome.Lollypop" apps
+# get_flathub_app "org.gnome.Calls" apps
 # Not sure about gedit, I feel like I could do without it.
-# get_flathub_app "org.gnome.gedit"
-# get_flathub_app "org.gnome.eog"
-# get_flathub_app "org.gnome.Documents"
-# get_flathub_app "org.gnome.clocks"
+# get_flathub_app "org.gnome.gedit" apps
+# get_flathub_app "org.gnome.eog" apps
+# get_flathub_app "org.gnome.Documents" apps
+# get_flathub_app "org.gnome.clocks" apps

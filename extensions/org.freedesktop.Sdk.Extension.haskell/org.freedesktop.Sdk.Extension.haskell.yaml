@@ -1,0 +1,115 @@
+---
+id: org.freedesktop.Sdk.Extension.haskell
+branch: "20.08"
+runtime: org.freedesktop.Sdk
+runtime-version: "20.08"
+sdk: org.freedesktop.Sdk
+build-extension: true
+separate-locales: false
+appstream-compose: false
+build-options:
+  prefix: /usr/lib/sdk/haskell
+  prepend-ld-library-path: /usr/lib/sdk/haskell/lib/
+  env: []
+modules:
+  - name: ncurses
+    sources:
+      - type: archive
+        url: "https://ftp.gnu.org/gnu/ncurses/ncurses-6.3.tar.gz"
+        sha256: 97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059
+        x-checker-data:
+          type: anitya
+    config-opts:
+      - "--prefix=${FLATPAK_DEST}"
+      - "--with-shared"
+      - "--with-termlib=tinfo"
+      - "--with-versioned-syms"
+    make-install-args:
+      - install.libs
+    no-autogen: true
+    cleanup:
+      - /bin
+      - /include
+      - /share/man
+      - /lib/*.a
+      - /lib/*.la
+  - name: libnuma
+    sources:
+      - type: git
+        url: "https://github.com/numactl/numactl.git"
+        commit: dd6de072c92c892a86e18c0fd0dfa1ba57a9a05d
+        tag: v2.0.14
+        x-checker-data:
+          type: git
+    make-args:
+      - install
+    buildsystem: autotools
+    cleanup:
+      - /bin
+  - name: ghc
+    sources:
+      - type: archive
+        url: "https://downloads.haskell.org/ghc/9.2.2/ghc-9.2.2-aarch64-deb10-linux.tar.xz"
+        sha256: f3621ccba7ae48fcd67a9505f61bb5ccfb05c4cbfecd5a6ea65fe3f150af0e98
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: html
+          url: "https://downloads.haskell.org/ghc/latest/"
+          version-pattern: "ghc-([\\d.]+)[\\S]+\\.tar\\.xz"
+      - type: archive
+        url: "https://downloads.haskell.org/ghc/9.2.2/ghc-9.2.2-x86_64-deb10-linux.tar.xz"
+        sha256: fb61dea556a2023dc2d50ee61a22144bb23e4229a378e533065124c218f40cfc
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: html
+          url: "https://downloads.haskell.org/ghc/latest/"
+          version-pattern: "ghc-([\\d.]+)[\\S]+\\.tar\\.xz"
+    make-args:
+      - install
+    buildsystem: autotools
+  - name: cabal
+    sources:
+      - type: archive
+        url: "https://downloads.haskell.org/cabal/cabal-install-3.6.2.0/cabal-install-3.6.2.0-aarch64-linux-deb10.tar.xz"
+        sha256: d9acee67d4308bc5c22d27bee034d388cc4192a25deff9e7e491e2396572b030
+        strip-components: 0
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: html
+          url: "https://downloads.haskell.org/cabal/cabal-install-latest/"
+          version-pattern: "cabal-install-([\\d.]+)[\\S]+\\.tar\\.xz"
+      - type: archive
+        url: "https://downloads.haskell.org/cabal/cabal-install-3.6.2.0/cabal-install-3.6.2.0-x86_64-linux-deb10.tar.xz"
+        sha256: 4759b56e9257e02f29fa374a6b25d6cb2f9d80c7e3a55d4f678a8e570925641c
+        strip-components: 0
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: html
+          url: "https://downloads.haskell.org/cabal/cabal-install-latest/"
+          version-pattern: "cabal-install-([\\d.]+)[\\S]+\\.tar\\.xz"
+    buildsystem: simple
+    build-commands:
+      - "install -C ./cabal ${FLATPAK_DEST}/bin/"
+  - name: scripts
+    sources:
+      - type: script
+        commands:
+          - "export PATH=$PATH:/usr/lib/sdk/haskell/bin"
+          - "export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/sdk/haskell/lib"
+        dest-filename: enable.sh
+    buildsystem: simple
+    build-commands:
+      - "cp enable.sh ${FLATPAK_DEST}"
+  - name: appdata
+    sources:
+      - type: file
+        path: org.freedesktop.Sdk.Extension.haskell.appdata.xml
+    buildsystem: simple
+    build-commands:
+      - "mkdir -p ${FLATPAK_DEST}/share/appdata"
+      - "cp org.freedesktop.Sdk.Extension.haskell.appdata.xml ${FLATPAK_DEST}/share/appdata"
+      - "appstream-compose --basename=org.freedesktop.Sdk.Extension.haskell --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Sdk.Extension.haskell"
