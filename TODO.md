@@ -35,7 +35,8 @@ https://github.com/openssh/openssh-portable.git
 # Gnome related stuff
 https://gitlab.gnome.org/GNOME/dconf.git
 https://gitlab.gnome.org/GNOME/eog.git
-
+libostree
+libappstream
 
 # The essential apps
 https://github.com/neovim/neovim.git
